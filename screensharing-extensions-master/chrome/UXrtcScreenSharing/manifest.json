@@ -1,0 +1,29 @@
+{
+  "name" : "UXrtc Screen Sharing",
+  "author": "Chris Sader",
+  "version" : "1.0.1",
+  "manifest_version" : 2,
+  "minimum_chrome_version": "34",
+  "description" : "This Chrome extension is for UXrtc. It doesn't do anything except allow you to share your screen in a UXrtc conference.",
+  "homepage_url": "http://path/to/homepage",
+  "background": {
+    "scripts": ["background-script.js"],
+    "persistent": false
+  },
+  "content_scripts": [ {
+   "js": [ "content-script.js" ],
+   "all_frames": true,
+   "matches": ["https://*.uxrtc.bluemix.com/*"]
+  }],
+  "icons": {
+    "16": "logo16.png",
+    "48": "logo48.png",
+    "128": "logo128.png"
+  },
+  "permissions": [
+    "desktopCapture"
+  ],
+  "web_accessible_resources": [
+    "icon.png"
+  ]
+}
